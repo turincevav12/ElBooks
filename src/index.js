@@ -2,5 +2,6 @@ import React, { Component} from "react"
 import {render} from "react-dom"
 
 import Head from "./head/index"
+import Form from "./form/index"
 
-render(<Head/>, document.body)
+render([<Head/>, <Form />], document.body)

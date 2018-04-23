@@ -3,29 +3,37 @@ import { render } from "react-dom";
 import "./index.css"
 import "../fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.css"
 
+import NameNewBook from "../newBook/index"
+
 class Head extends Component {
     render() {
         return(
-            <div className="head">
-                <div id="icon" onClick={IconClick}>
-                    <i class="fas fa-book fa-2x"></i>
-                    <span id="icon-text">ElBook</span>
+            <div className="header">
+                <div className="buttons">
+                    <i class="fas fa-check-circle fa-2x" id="icon"></i>
+                    <div className="button" onClick={OpenBook}>Открыть книгу</div>
+                    <div className="button" onClick={NewBook}>Создать книгу</div>
+                    <div className="button" onClick={Setting}>Настройки</div>
                 </div>
-
-                <div id="close" onClick={CloseWindow}>
-                    <i class="far fa-times-circle fa-2x"></i>
-                </div>
-            </div>  
+            </div>
         )
     }    
 }
 
 function IconClick(){
-    
+    document.body.scrollIntoView()
+    render("", document.getElementById('form'))
 }
 
-function CloseWindow(){
-    alert('Close')
+
+function OpenBook(){
+    
+}
+function NewBook(){
+    render(<NameNewBook />, document.getElementById('form'))
+}
+function Setting(){
+
 }
 
 
