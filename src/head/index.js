@@ -10,7 +10,7 @@ class Head extends Component {
         return(
             <div className="header">
                 <div className="buttons">
-                    <i class="fas fa-check-circle fa-2x" id="icon"></i>
+                    <i class="fas fa-check-circle fa-2x" id="icon" onClick={IconClick}></i>
                     <div className="button" onClick={OpenBook}>Открыть книгу</div>
                     <div className="button" onClick={NewBook}>Создать книгу</div>
                     <div className="button" onClick={Setting}>Настройки</div>
