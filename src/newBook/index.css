@@ -76,3 +76,12 @@
 .newBookButton:active{
     box-shadow: inset 0px 0px 5px 1px rgb(2, 2, 2);
 }
+.inputAbzac{
+    width: 98%;
+    font-size: 18px;
+    margin: 5px 1%;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+}
