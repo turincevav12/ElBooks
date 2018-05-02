@@ -1,22 +1,41 @@
 .formNameNewBook{
     position: fixed;
     width: 300px;
-    height: 160px;
-    background: rgb(160, 148, 149);
-    border-radius: 5px;
+    height: 150px;
+    background: rgb(184, 62, 46);
     margin: 120px calc(50% - 150px);
     font-size: 21px;
     padding: 10px;
     color: white;
-    box-shadow: 3px 3px 3px 4px black;
+    box-shadow: 0px 0px 15px 10px #b83c2f;
+}
+.formAbzacNewBook{
+    position: fixed;
+    width: 80%;
+    height: max-content;
+    background: rgb(184, 62, 46);
+    margin: 50px 10%;
+    font-size: 21px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 0px 15px 10px #b83c2f;
 }
 #newNameBook{
     width: 100%;
     font-size: 18px;
     margin-top: 30px;
 }
+#newAbzac{
+    width: 100%;
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}
 #buttons{
     margin: 35px auto;
+    width: 80%;
+}
+#buttonsAbzac{
+    margin: 20px auto;
     width: 80%;
 }
 #top-line-creat-book-name{
@@ -46,10 +65,9 @@
 }
 .NewBook{
     width: 95%;
-    height: auto;
-    border: 1px solid black;
-    margin: 0 auto;
-    background: floralwhite;
+    height: max-content;
+    margin: 35px auto;
+    background: aliceblue;
 }
 #nameBook{
     text-align: center;
@@ -57,7 +75,7 @@
     font-size: 30px;
 }
 #newBookButtons{
-    width: 615px;
+    width: 420px;
     height: auto;
     display: flex;
     margin: 0 auto;
@@ -84,4 +102,21 @@
     border: 0;
     cursor: pointer;
     outline: 0;
+}
+#textareaTextAbzac {
+    margin: 0px;
+    min-height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+}
+.abzacBook{
+    padding: 5px;
+    display: grid;
+    margin: 0 0 10px 0;
+}
+.abzacBook{
+    font-size: 21px;
+}
+.textAbzac{
+    font-size: 18px;
 }

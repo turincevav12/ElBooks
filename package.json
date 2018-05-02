@@ -4,14 +4,30 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.0",
+    "electron": "^1.8.6",
+    "electron-builder": "^20.11.1",
+    "fs": "0.0.1-security",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "electron-builder": "^20.11.1"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "start": "react-scripts start"
+  },
+  "main": "index.js",
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turincevav12/ElBook.git"
+  },
+  "author": "woddy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turincevav12/ElBook/issues"
+  },
+  "homepage": "https://github.com/turincevav12/ElBook#readme",
+  "description": ""
 }

@@ -1,16 +1,34 @@
 import React,{ Component } from "react";
 import { render } from "react-dom";
-import "./index.css"
+import "./index.css";
+
+var fs = require("fs");
+
+
+try {
+    
+        fs.appendFile('message.txt', 'data to append', function (err) {
+            if (err) throw err;
+            console.log('The "data to append" was appended to file!');
+        });
+    
+    } catch (err) {
+    
+        
+}
 
 class NameNewBook extends Component {
     render() {
-        var nameForNewBook = "Наименование"
+        window.bookMass = {
+            
+        }
+            
         return(
             <div className="formNameNewBook">
                 <div id="top-line-creat-book-name">
-                    <span>{nameForNewBook}</span> 
+                    <span>Наименование</span> 
                 </div>
-                <input id="newNameBook" placeholder={nameForNewBook}></input>
+                <input id="newNameBook" placeholder="Наименование"></input>
 
                 <div id="buttons">
                     <div onClick={Creat} className="buttons-creat-new-book">Создать</div>
@@ -24,23 +42,21 @@ class NameNewBook extends Component {
 class NewBook extends Component {
     
     render(){
-        var NameBook = document.getElementById('newNameBook').value
-
         return(
             <div className="NewBook">
                 <div id="book">
                     <div id="nameBook">
-                        <span>{NameBook}</span>
+                        <span>{window.bookMass[0].name}</span>
+                    </div>
+                    <div id="textBook">
+
                     </div>
                 </div>
                 <div id="newBookButtons">
                     <div className="newBookButton" onClick={NewBookButton_1}>
-                        <span>Создать обзац...</span>
+                        <span>Добавить абзац</span>
                     </div>
                     <div className="newBookButton" onClick={NewBookButton_2}>
-                        <span>Создать текс абзаца...</span>
-                    </div>
-                    <div className="newBookButton" onClick={NewBookButton_3}>
                         <span>Сохранить</span>
                     </div>
                 </div>
@@ -49,26 +65,72 @@ class NewBook extends Component {
     }
 }
 
+class NewAbzac extends Component {
+    render(){
+        return(
+            <div className="formAbzacNewBook">
+                <div id="top-line-creat-book-name">
+                    <span>Добавление абзаца</span> 
+                </div>
+                <input id="newAbzac" placeholder="Название абзаца..."></input>
+                <textarea name="textOfBook" id="textareaTextAbzac" wrap="virtual" placeholder="Текст..."></textarea> 
+
+                <div id="buttonsAbzac">
+                    <div onClick={addAbzac} className="buttons-creat-new-book">Добавит</div>
+                    <div onClick={CancelAbzac} className="buttons-creat-new-book">Закончить</div>
+                </div>
+            </div>
+        )
+    }
+}
+
 function Creat () {
+    window.bookMass.push({"name": document.getElementById('newNameBook').value})
     render(<NewBook />,document.getElementById("form"))
+    window.i = true
 }
 
 function Cancel () {
     render("",document.getElementById("form"))
 }
-var i = 0
 function NewBookButton_1 () {
-    var inputAbzac = document.createElement('input')
-    inputAbzac.id = "inputAbzac"+i
-    inputAbzac.className = "inputAbzac"
-    inputAbzac.placeholder = "Название абзаца"
-    document.getElementById('book').appendChild(inputAbzac)
-    i++
+    render([<NewBook />, <NewAbzac />],document.getElementById("form"))
 }
 function NewBookButton_2 () {
+
     
 }
-function NewBookButton_3 () {
 
+function addAbzac (){
+    window.bookMass.push({
+        "abzac": document.getElementById('newAbzac').value,
+        "textAbzac": document.getElementById('textareaTextAbzac').value
+    })
+    document.getElementById('newAbzac').value = ""
+    document.getElementById('textareaTextAbzac').value = ""
+    console.log(window.bookMass)
+}
+function CancelAbzac () {
+    render(<NewBook />,document.getElementById("form"))
+    var thusBook = document.getElementById('textBook')
+    thusBook.innerHTML = ""
+
+    for(var i = 1; i != window.bookMass.length; i++){
+        var abzac = document.createElement('div')
+        abzac.className = "divAbzacName"
+
+        var abzacName = document.createElement('span')
+        abzac.innerText = window.bookMass[i].abzac
+        abzac.className = "abzacBook"
+
+        var textBook = document.createElement('span')
+        textBook.innerText = window.bookMass[i].textAbzac
+        textBook.className = "textAbzac"
+
+        abzac.appendChild(abzacName)
+        abzac.appendChild(textBook)
+        thusBook.appendChild(abzac)
+    }
+    
 }
 export default NameNewBook
