@@ -6,19 +6,22 @@
     "bootstrap": "^4.1.0",
     "electron": "^1.8.6",
     "electron-builder": "^20.11.1",
+    "electron-compile": "^6.4.2",
+    "electron-forge": "^5.2.0",
+    "electron-prebuilt-compile": "^2.0.0",
     "fs": "0.0.1-security",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
-    "electron-builder": "^20.11.1"
+    "react-modal": "^3.4.4",
+    "react-scripts": "1.1.4"
   },
   "scripts": {
+    "start1": "electron-forge start",
     "build": "react-scripts build",
     "start": "react-scripts start"
   },
   "main": "index.js",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/turincevav12/ElBook.git"

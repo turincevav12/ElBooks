@@ -4,13 +4,18 @@ import "./index.css";
 
 var fs = require("fs");
 
+window.bookMass = [
+    
+]
+
 
 try {
     
-        fs.appendFile('message.txt', 'data to append', function (err) {
-            if (err) throw err;
-            console.log('The "data to append" was appended to file!');
-        });
+    var fs = require("fs");
+    fs.appendFile('message.txt', 'data to append', function (err) {
+        if (err) throw err;
+        console.log('The "data to append" was appended to file!');
+    });
     
     } catch (err) {
     
@@ -19,9 +24,6 @@ try {
 
 class NameNewBook extends Component {
     render() {
-        window.bookMass = {
-            
-        }
             
         return(
             <div className="formNameNewBook">
@@ -97,8 +99,25 @@ function NewBookButton_1 () {
     render([<NewBook />, <NewAbzac />],document.getElementById("form"))
 }
 function NewBookButton_2 () {
+    window.dataNewBook = {
+        "name": window.bookMass[0].name,
+        "razdel":[
 
-    
+        ]
+    }    
+    for (var i = 1; i != window.bookMass.length - 1; i++){
+        alert(i)
+        window.dataNewBook.razdel.push({
+            "name":window.bookMass[i].abzac,
+            "text":window.bookMass[i].textAbzac
+        })
+    }
+    var fs = require("fs");
+    fs.appendFile('test.json', JSON.stringify(window.dataNewBook), function (err) {
+        if (err) throw err;
+        console.log('The "data to append" was appended to file!');
+    });
+    console.log(window.dataNewBook)
 }
 
 function addAbzac (){

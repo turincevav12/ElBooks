@@ -1,7 +1,11 @@
-import React, { Component} from "react"
+//import { ipcRenderer as ipc } from 'electron';
+import React, { Component } from 'react';
+import Modal from 'react-modal';
 import {render} from "react-dom"
 
-import Head from "./head/index"
-import Form from "./form/index"
+import Head from "./head/index.jsx"
+import Form from "./form/index.jsx"
 
-render([<Head/>, <Form />], document.body)
+Modal.setAppElement('#App');
+
+render([<Head/>, <Form />], document.getElementById('App'))

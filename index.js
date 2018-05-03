@@ -1,9 +1,12 @@
-const electron = require('electron');
-const path = require('path');
-
+const electron = require('electron')
 const app = electron.app;
-const globalShortcut = electron.globalShortcut;
 const BrowserWindow = electron.BrowserWindow;
+const ipcMain = electron.ipcMain;
+const ipc = require('electron');
+const enableLiveReload = require('electron-compile');
+
+const path = require('path');
+const globalShortcut = electron.globalShortcut;
 
 app.on('ready', function() {
     mainWindow = new BrowserWindow({
@@ -11,6 +14,7 @@ app.on('ready', function() {
         height: 400,
         frame: false,
         fullscreen: true,
+        title: "ElBook",
         show: false
     });
 
@@ -18,7 +22,8 @@ app.on('ready', function() {
         app.quit();
     });
 
-    mainWindow.loadURL('http://localhost:3000');
+    //mainWindow.loadURL(`file://${__dirname}/public/index.html`);
+    mainWindow.loadURL(`http://localhost:3000/`);
     mainWindow.show();    
 
 });

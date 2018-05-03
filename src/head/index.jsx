@@ -1,9 +1,10 @@
-import React,{ Component } from "react";
+import React, { Component } from 'react';
+import Modal from 'react-modal';
 import { render } from "react-dom";
 import "./index.css"
-import "../fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.css"
 
 import NameNewBook from "../newBook/index"
+import FormOpenBook from "../readBook/index"
 
 
 class Head extends Component {
@@ -44,7 +45,7 @@ function IconClick(){
 
 
 function OpenBook(){
-    
+    render(<FormOpenBook />, document.getElementById('form'))
 }
 function NewBook(){
     render(<NameNewBook />, document.getElementById('form'))
@@ -53,5 +54,4 @@ function Setting(){
 
 }
 
-
-export default Head 
+export default Head

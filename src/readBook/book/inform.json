@@ -1,0 +1,21 @@
+{
+    "name": "test",
+    "razdel":    [
+        {
+            "name":"testName1",
+            "text": "testText1"
+        },
+        {
+            "name":"testName2",
+            "text": "testText2"
+        },
+        {
+            "name":"testName3",
+            "text": "testText3"
+        },
+        {
+            "name":"testName4",
+            "text": "testText4"
+        }
+    ]
+}
