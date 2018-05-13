@@ -1,0 +1,190 @@
+.formNameNewBook{
+    position: fixed;
+    width: 300px;
+    height: 150px;
+    background: rgb(184, 62, 46);
+    margin: 120px calc(50% - 150px);
+    font-size: 21px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 0px 15px 10px #b83c2f;
+}
+.formAbzacNewBook{
+    position: absolute;
+    width: 80%;
+    height: max-content;
+    background: rgb(184, 62, 46);
+    margin: 50px 10%;
+    font-size: 21px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 0px 15px 10px #b83c2f;
+}
+#newNameBook{
+    width: 100%;
+    font-size: 18px;
+    margin-top: 30px;
+}
+#newAbzac{
+    width: 100%;
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}
+#buttons{
+    margin: 35px auto;
+    width: 80%;
+}
+#buttonsAbzac{
+    margin: 20px auto;
+    width: 80%;
+}
+#toplinecreatbookname{
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 21px;
+    font-family: cursive;
+    cursor: context-menu;
+}
+.buttonscreatnewbook{
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 1px 1px 2px 1px rgb(2, 2, 2);
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    border-radius: 3px; 
+}
+.buttonscreatnewbook:hover{
+    box-shadow: 0px 0px 0px 1px rgb(2, 2, 2);
+}
+.buttonscreatnewbook:active{
+    box-shadow: inset 0px 0px 5px 1px rgb(2, 2, 2);
+}
+.NewBook{
+    width: 96%;
+    height: max-content;
+    margin: 35px 2%;
+    background: aliceblue;
+    
+}
+#nameBook{
+    text-align: center;
+    margin: 5px auto;
+    font-size: 30px;
+}
+#newBookButtons{
+    width: 420px;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+}
+.newBookButton{
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 21px;
+    margin: 5px;
+    box-shadow: 1px 1px 2px 1px rgb(2, 2, 2);
+}
+.newBookButton:hover{
+    box-shadow: 0px 0px 1px 0px rgb(2, 2, 2);
+}
+.newBookButton:active{
+    box-shadow: inset 0px 0px 5px 1px rgb(2, 2, 2);
+}
+.inputAbzac{
+    width: 98%;
+    font-size: 18px;
+    margin: 5px 1%;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+}
+#textareaTextAbzac {
+    margin: 0px;
+    min-height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+}
+.abzacBook{
+    padding: 5px;
+    display: grid;
+    margin: 0 0 10px 0;
+}
+.abzacBook{
+    font-size: 21px;
+}
+.textAbzac{
+    font-size: 18px;
+}
+#textBook{
+    font-size: 18px;
+}
+.divAbzacName{
+    font-size: 18px;
+}#book{
+    font-size: 18px;
+}
+.styleAdd{
+    font-size: 21px;
+    width: 98.5%;
+    padding: 10px;
+    height: 25px;
+    box-shadow: 0 0 10px 1px black;
+    margin: 10px auto;
+    line-height: 25px;
+    cursor: context-menu;
+}
+#buttonAddTest{
+    width: 120px;
+    cursor: pointer;
+    height: 25px;
+    background: #b83e2e;
+    display: inline-block;
+    margin: 0 20px;
+    box-shadow: 0 0 5px 1px black;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+#formAddTest{
+    width: 90%;
+    position: relative;
+    height: min-content;
+    margin: 0 auto;
+    background: #b83e2e;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 10px #b83c2f;
+}
+#nameFormAddTest{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 28px;
+    border-bottom: 1px solid black;
+    
+}
+#addNewTest{
+    font-size: 21px;
+    width: 90%;
+    margin: 0 auto;
+}
+#testOtvet{
+    display: grid;
+}
+#addTestInBaza{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    background: #b83e2e;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px black;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 21px;
+    border-radius: 3px;
+}
