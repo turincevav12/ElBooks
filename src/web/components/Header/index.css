@@ -1,8 +1,13 @@
 .header{
     width: 100%;
     height: 111px;
+<<<<<<< HEAD:src/web/components/Header/index.css
     background-image: url(./bg-header.bmp);
     display: block;
+=======
+    background-image: url(bg-header.bmp);
+    position: fixed;
+>>>>>>> 617e11b6e1312cb62ac32d1b79e6ddf4d47feb28:src/head/index.css
     border-radius: 0 0 5px 5px;
     user-select: none;
 }
